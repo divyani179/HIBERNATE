@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 10, 2015 11:53:18 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.tableperconcrete.SportsItem" table="SPORTSITEM" >
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="sequence">
+            <param name="sequence">item_seq</param>
+            </generator>
+        </id>
+        <property name="sportstype" type="java.lang.String">
+            <column name="SPORTSTYPE" />
+        </property>
+    </class>
+</hibernate-mapping>

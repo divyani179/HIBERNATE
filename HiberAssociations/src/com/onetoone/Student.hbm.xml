@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 6, 2015 1:32:44 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.onetoone.Student" table="STUDENT">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="sequence" >
+            <param name="sequence">studsequence</param>
+            </generator>
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" length="12" />
+        </property>
+        <property name="department" type="java.lang.String">
+            <column name="DEPARTMENT" length="10" />
+        </property>
+        <many-to-one name="Address" class="com.onetoone.Address" cascade="all" unique="true" fetch="join">
+            <column name="ADDRESS" length="10"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

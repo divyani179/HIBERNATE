@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 10, 2015 11:07:28 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <joined-subclass name="com.tablepersubclass.Manager" extends="com.tablepersubclass.Employee" table="MANAGER" lazy="false">
+        <key>
+            <column name="ID" />
+        </key>
+        <property name="allowance" type="int">
+            <column name="ALLOWANCE" />
+        </property>
+    </joined-subclass>
+</hibernate-mapping>

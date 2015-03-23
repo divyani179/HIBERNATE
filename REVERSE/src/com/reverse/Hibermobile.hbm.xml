@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 11, 2015 12:11:25 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.reverse.Hibermobile" table="HIBERMOBILE" schema="SYSTEM">
+        <id name="mobileId" type="long">
+            <column name="MOBILE_ID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="MModel" type="string">
+            <column name="M_MODEL" length="1020" />
+        </property>
+        <property name="price" type="long">
+            <column name="PRICE" precision="10" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

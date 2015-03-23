@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 6, 2015 2:35:22 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.onetomany.Book" table="BOOK">
+        <id name="bookid" type="int">
+            <column name="BOOKID" />
+            <generator class="sequence" >
+                <param name="sequence">book_sequence</param>
+            </generator>
+        </id>
+        <property name="bookname" type="java.lang.String">
+            <column name="BOOKNAME" length="10"/>
+        </property>
+        <property name="author" type="java.lang.String">
+            <column name="AUTHOR" length="10"/>
+        </property>
+        <property name="bookprice" type="int">
+            <column name="BOOKPRICE" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>
